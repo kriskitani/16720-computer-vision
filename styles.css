@@ -60,14 +60,13 @@ h1 {
 .overview p { margin: 0; }
 
 .people {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 18px;
   margin: 0 0 18px;
 }
 
 .person {
-  width: 96px;
   min-width: 0;
   text-align: center;
 }
@@ -149,8 +148,7 @@ footer {
   .syllabus-label { font-size: 0.72rem; }
   .pdf-svg { width: 25px; height: 30px; }
   .overview { margin-top: 12px; }
-  .people { gap: 16px 10px; }
-  .person { width: 82px; }
+  .people { grid-template-columns: repeat(3, 1fr); gap: 16px 10px; }
   .photo-placeholder { width: 62px; height: 62px; }
   table { font-size: 0.8rem; line-height: 1.1; }
   th, td { padding: 2px 4px; }
