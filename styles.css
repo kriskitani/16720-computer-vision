@@ -40,62 +40,58 @@ h1 {
 
 .syllabus-card {
   flex: 0 0 auto;
-  width: 74px;
+  width: 64px;
   color: #333;
   text-align: center;
   text-decoration: none;
   border: 0;
 }
 
-.paper-thumb {
+.pdf-icon {
+  position: relative;
   display: block;
-  width: 58px;
-  height: 76px;
+  width: 42px;
+  height: 52px;
   margin: 0 auto 5px;
-  padding: 8px 7px;
   background: #fff;
-  border: 1px solid #cfcfcf;
-  box-shadow: 0 1px 4px rgba(0,0,0,.08);
-  text-align: left;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 2px;
 }
 
-.paper-title {
-  display: block;
-  font-size: 7px;
-  font-weight: 700;
-  line-height: 1.1;
+.pdf-icon::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  right: -1.5px;
+  width: 13px;
+  height: 13px;
+  background: linear-gradient(225deg, #fff 49%, #bdbdbd 50%, #bdbdbd 55%, #f3f3f3 56%);
 }
 
-.paper-subtitle {
-  display: block;
-  margin-top: 2px;
-  font-size: 5px;
-  color: #555;
-  line-height: 1.1;
-}
-
-.paper-rule {
-  display: block;
-  height: 2px;
-  margin: 5px 0 6px;
+.pdf-icon span {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 9px;
+  padding: 2px 0 1px;
   background: #c41230;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .04em;
 }
-
-.paper-line {
-  display: block;
-  height: 2px;
-  margin: 4px 0;
-  background: #d8d8d8;
-}
-
-.paper-line.short { width: 72%; }
 
 .syllabus-label {
-  font-size: 0.78rem;
-  color: #a30f29;
+  display: block;
+  color: #777;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1;
 }
 
-.syllabus-card:hover .paper-thumb { border-color: #aaa; }
+.syllabus-card:hover .pdf-icon { border-color: #888; }
 .syllabus-card:hover .syllabus-label { color: #c41230; }
 
 .overview {
@@ -172,8 +168,8 @@ footer {
   .top-header { gap: 16px; }
   h1 { font-size: 1.65rem; }
 
-  .syllabus-card { width: 62px; }
-  .paper-thumb { width: 50px; height: 66px; }
+  .syllabus-card { width: 56px; }
+  .pdf-icon { width: 38px; height: 47px; }
 
   .overview {
     display: block;
