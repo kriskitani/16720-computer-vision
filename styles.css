@@ -13,11 +13,15 @@ body {
   width: 100%;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 38px 64px 28px;
+  padding: 42px 64px 30px;
 }
 
-header {
-  padding-bottom: 12px;
+.top-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  padding-bottom: 14px;
   border-bottom: 2px solid #c41230;
 }
 
@@ -30,15 +34,75 @@ h1 {
 }
 
 .term {
-  margin: 3px 0 0;
+  margin: 4px 0 0;
   color: #666;
 }
+
+.syllabus-card {
+  flex: 0 0 auto;
+  width: 74px;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+}
+
+.paper-thumb {
+  display: block;
+  width: 58px;
+  height: 76px;
+  margin: 0 auto 5px;
+  padding: 8px 7px;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  text-align: left;
+}
+
+.paper-title {
+  display: block;
+  font-size: 7px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.paper-subtitle {
+  display: block;
+  margin-top: 2px;
+  font-size: 5px;
+  color: #555;
+  line-height: 1.1;
+}
+
+.paper-rule {
+  display: block;
+  height: 2px;
+  margin: 5px 0 6px;
+  background: #c41230;
+}
+
+.paper-line {
+  display: block;
+  height: 2px;
+  margin: 4px 0;
+  background: #d8d8d8;
+}
+
+.paper-line.short { width: 72%; }
+
+.syllabus-label {
+  font-size: 0.78rem;
+  color: #a30f29;
+}
+
+.syllabus-card:hover .paper-thumb { border-color: #aaa; }
+.syllabus-card:hover .syllabus-label { color: #c41230; }
 
 .overview {
   display: flex;
   flex-wrap: wrap;
-  gap: 2px 22px;
-  margin: 14px 0 12px;
+  gap: 3px 22px;
+  margin: 16px 0 14px;
   line-height: 1.35;
 }
 
@@ -46,27 +110,14 @@ h1 {
 
 .description {
   max-width: 800px;
-  margin: 0 0 8px;
+  margin: 0 0 9px;
 }
 
 .student-note {
   max-width: 800px;
-  margin: 0 0 5px;
+  margin: 0 0 18px;
   color: #666;
   font-size: 0.92rem;
-}
-
-.syllabus { margin: 0 0 24px; }
-
-a {
-  color: #a30f29;
-  text-decoration: none;
-  border-bottom: 1px solid #d8abb3;
-}
-
-a:hover {
-  color: #c41230;
-  border-bottom-color: #c41230;
 }
 
 h2 {
@@ -115,10 +166,14 @@ footer {
 
 @media (max-width: 700px) {
   .page {
-    padding: 24px 20px 24px;
+    padding: 26px 20px 24px;
   }
 
+  .top-header { gap: 16px; }
   h1 { font-size: 1.65rem; }
+
+  .syllabus-card { width: 62px; }
+  .paper-thumb { width: 50px; height: 66px; }
 
   .overview {
     display: block;
