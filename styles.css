@@ -47,43 +47,14 @@ h1 {
 
 .syllabus-label { font-size: 0.78rem; font-weight: 600; line-height: 1; }
 
-.pdf-icon {
-  position: relative;
+.pdf-svg {
   display: block;
-  width: 30px;
-  height: 37px;
-  background: #fff;
-  border: 1.25px solid #bdbdbd;
-  border-radius: 2px;
+  width: 28px;
+  height: 34px;
 }
 
-.pdf-icon::before {
-  content: "";
-  position: absolute;
-  top: -1.25px;
-  right: -1.25px;
-  width: 9px;
-  height: 9px;
-  background: linear-gradient(225deg, #fff 49%, #bdbdbd 50%, #bdbdbd 55%, #f3f3f3 56%);
-}
-
-.pdf-icon span {
-  position: absolute;
-  left: 4px;
-  right: 4px;
-  bottom: 6px;
-  padding: 1px 0;
-  background: #c41230;
-  color: #fff;
-  font-size: 7px;
-  font-weight: 800;
-  line-height: 1;
-  text-align: center;
-  letter-spacing: .03em;
-}
-
-.syllabus-card:hover .pdf-icon { border-color: #888; }
 .syllabus-card:hover .syllabus-label { color: #c41230; }
+.syllabus-card:hover .pdf-svg path:first-child { stroke: #444; }
 
 .overview { margin: 14px 0 12px; line-height: 1.35; }
 .overview p { margin: 0; }
@@ -164,7 +135,7 @@ footer {
   h1 { font-size: 1.65rem; }
   .syllabus-card { gap: 6px; }
   .syllabus-label { font-size: 0.72rem; }
-  .pdf-icon { width: 27px; height: 33px; }
+  .pdf-svg { width: 25px; height: 30px; }
   .overview { margin-top: 12px; }
   .people { grid-template-columns: repeat(3, 1fr); gap: 14px 10px; }
   table { font-size: 0.8rem; line-height: 1.1; }
