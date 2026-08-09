@@ -77,13 +77,21 @@ h1 {
   text-align: center;
 }
 
-.photo-placeholder {
+.photo-placeholder,
+.staff-photo {
+  display: block;
   width: 72px;
   height: 72px;
   margin: 0 auto 6px;
-  background: #f4f4f4;
   border: 1px solid #dedede;
   border-radius: 50%;
+}
+
+.photo-placeholder { background: #f4f4f4; }
+
+.staff-photo {
+  object-fit: cover;
+  object-position: center;
 }
 
 .person strong,
@@ -158,7 +166,8 @@ footer {
   .syllabus-thumb { width: 38px; height: 49px; }
   .overview { margin-top: 12px; }
   .people { grid-template-columns: repeat(3, 1fr); gap: 16px 10px; }
-  .photo-placeholder { width: 62px; height: 62px; }
+  .photo-placeholder,
+  .staff-photo { width: 62px; height: 62px; }
   table { font-size: 0.8rem; line-height: 1.1; }
   th, td { padding: 2px 4px; }
   th:first-child { width: 66px; }
