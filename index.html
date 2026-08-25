@@ -83,7 +83,24 @@
       </table>
     </section>
 
-    <footer>16-720 Computer Vision · Carnegie Mellon University · Fall 2026</footer>
+    <footer>
+      <span>16-720 Computer Vision · Carnegie Mellon University · Fall 2026</span>
+      <span id="last-updated"></span>
+    </footer>
   </main>
+
+  <script>
+    const modified = new Date(document.lastModified);
+    const formatted = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short"
+    }).format(modified);
+    document.getElementById("last-updated").textContent = `Last updated: ${formatted}`;
+  </script>
 </body>
 </html>
